@@ -1,0 +1,93 @@
+.section-planetas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 900px;
+    max-height: 900px;
+    height: 900px;
+    width: 100%;
+    background-color: #000;
+    position: relative; 
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.section-planetas .corpoCeleste{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+}
+
+
+@keyframes rotacao-suave {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.mercury {
+  animation: rotacao-suave 60s linear infinite;
+}
+
+.venus {
+  animation: rotacao-suave 60s linear infinite reverse; 
+}
+
+.earth {
+  animation: rotacao-suave 60s linear infinite;
+}
+
+.mars {
+  animation: rotacao-suave 60s linear infinite;
+}
+
+.jupiter {
+  animation: rotacao-suave 60s linear infinite;
+}
+
+.saturn {
+  animation: rotacao-suave 60s linear infinite;
+}
+
+.uranus {
+  animation: rotacao-suave 60s linear infinite;
+  transform: rotate(15deg); 
+}
+
+.neptune {
+  animation: rotacao-suave 60s linear infinite;
+}
+
+.texto{
+    font-size: 20rem;
+    color: #0e0e0e;
+}
+
+.texto::after {
+  animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media screen and (max-width: 700px) {
+  .section-planetas {
+    min-height: 450px;
+    max-height: 450px;
+    height: 450px;
+  }
+  .texto{
+    font-size: 7rem;;
+}
+}
+
+
